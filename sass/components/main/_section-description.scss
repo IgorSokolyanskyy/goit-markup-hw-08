@@ -1,0 +1,29 @@
+.section-description {
+  @include paddings(94px 0);
+}
+.description-card__list {
+  display: flex;
+  justify-content: space-between;
+}
+.description-card__item {
+  width: 270px;
+}
+
+.description-card__icon {
+  @include centeredFlex;
+  height: 120px;
+  margin-bottom: 30px;
+  background: $secondry-background-color;
+  border-radius: 4px;
+}
+.description-card__subtitle {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+}
+.description-card__text {
+  color: $title-text-color;
+}

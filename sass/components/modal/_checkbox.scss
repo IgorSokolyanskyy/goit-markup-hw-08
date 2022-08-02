@@ -1,0 +1,53 @@
+/* чекбокс */
+.options {
+  position: relative;
+  @include centeredFlex;
+  margin-bottom: 30px;
+}
+
+.options__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+
+  &:checked + .options__icon {
+    background-color: $accent-color;
+    border: none;
+  }
+  &:focus + .options__icon,
+  &:hover + .options__icon {
+    border-color: $accent-color;
+  }
+}
+
+.options__icon {
+  margin-right: 8px;
+
+  border: 2px solid $primary-text-colot;
+  border-radius: 2px;
+  /* background-origin: border-box; */
+
+  transition: background-color $transition-time $timing-functions,
+    border-color $transition-time $timing-functions;
+
+  cursor: pointer;
+}
+
+.agreement {
+  margin-left: 4px;
+  color: $accent-color;
+
+  &::after {
+    position: absolute;
+    content: '';
+
+    right: 12px;
+    bottom: 5px;
+    @include widthHeigh(28.5%, 0.5px);
+
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+}

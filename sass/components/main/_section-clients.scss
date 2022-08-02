@@ -1,0 +1,37 @@
+/* постоянные клиенты */
+.section-clients {
+  @include paddings(94px 0);
+}
+
+.clients-card__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .clients-card__item {
+  display: block;
+  margin-right: 30px;
+} */
+/* .clients-items .clients-item + .clients-item {
+  margin-left: 30px;
+} */
+/* .clients-card__item:last-child {
+  margin-right: 0;
+} */
+
+.clients-card__icon {
+  @include centeredFlex;
+  @include widthHeigh(170px, 92px);
+
+  border: 1px solid $primary-fill-colot;
+  border-radius: 4px;
+
+  fill: $primary-fill-colot;
+
+  transition: fill $transition-time $timing-functions, border $transition-time $timing-functions;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+  }
+}

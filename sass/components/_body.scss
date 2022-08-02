@@ -1,0 +1,6 @@
+body {
+  @include fontFamilyMain;
+  background-color: $primary-background-color;
+  color: $primary-text-colot;
+  @include utils;
+}

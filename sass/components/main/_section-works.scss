@@ -1,0 +1,32 @@
+.section-works {
+  @include paddings(0 0 94px);
+}
+
+.works-foto__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.works-foto__item {
+  position: relative;
+}
+.works-foto__img {
+  display: block;
+}
+
+.works-foto__position {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
+  @include paddings(27px 0);
+
+  background: $works-foto__position;
+}
+
+.works-foto__subtitle {
+  color: $primary-white-color;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+}

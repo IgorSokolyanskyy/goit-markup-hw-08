@@ -1,0 +1,31 @@
+/*  Фильтки / Кнопки */
+.portfolio-button__list {
+  @include centeredFlex;
+  margin-bottom: 50px;
+  gap: $gap8;
+}
+
+.portfolio-button__button {
+  @include paddings(6px 22px);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+
+  background-color: $secondry-background-color;
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+
+  transition: color $transition-time $timing-functions,
+    box-shadow $transition-time $timing-functions,
+    background-color $transition-time $timing-functions;
+
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: $portfolio-button__button-box-shadow;
+  }
+}

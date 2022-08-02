@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  @include fontFamilyLogo;
+}
+.logo__text {
+  color: $primary-text-colot;
+
+  &--inverse {
+    color: $primary-white-color;
+  }
+}
+.footer__logo {
+  margin-bottom: 20px;
+}

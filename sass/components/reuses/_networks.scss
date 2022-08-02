@@ -1,0 +1,39 @@
+/* соц-сети-команды */
+.networks__list {
+  display: flex;
+  justify-content: center;
+}
+
+.networks__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.networks__icon {
+  @include centeredFlex;
+  @include widthHeigh(44px, 44px);
+
+  border-radius: 50%;
+
+  fill: $primary-fill-colot;
+  background-color: $primary-white-color;
+
+  cursor: pointer;
+
+  transition: fill $transition-time $timing-functions,
+    background-color $transition-time $timing-functions;
+  &:hover,
+  &:focus {
+    fill: $primary-white-color;
+    background-color: $accent-color;
+  }
+}
+
+/* присоединяйтесь */
+.footer__icon {
+  fill: $primary-white-color;
+  background-color: $footer__icon-background-color;
+}

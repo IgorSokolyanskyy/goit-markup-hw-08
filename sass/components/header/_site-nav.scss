@@ -1,0 +1,38 @@
+.site-nav__list {
+  display: flex;
+  gap: $gap50;
+  margin-left: 93px;
+}
+
+// .site-nav__item:first-child {
+// }
+
+.link {
+  @include linkSize;
+  transition: color $transition-time $timing-functions;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+  &--current {
+    position: relative;
+    color: $accent-color;
+  }
+  /* нижнее подчеркивание */
+  &--current::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+
+    @include widthHeigh(100%, 4px);
+
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+}

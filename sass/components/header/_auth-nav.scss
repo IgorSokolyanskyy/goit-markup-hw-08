@@ -1,0 +1,17 @@
+.auth-nav__list {
+  display: flex;
+  margin-left: auto;
+  gap: $gap30;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  gap: $gap10;
+
+  @include linkSize;
+  fill: $title-text-color;
+  color: $title-text-color;
+
+  transition: color $transition-time $timing-functions, fill $transition-time $timing-functions;
+}

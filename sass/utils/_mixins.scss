@@ -1,0 +1,61 @@
+@mixin fontFamilyMain {
+  font-family: $fontFamilyMain;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+@mixin fontFamilyLogo {
+  font-family: $fontFamilyLogo;
+  color: $accent-color;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+@mixin utils {
+  h1,
+  h2,
+  h3,
+  h4,
+  ul,
+  p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+@mixin widthHeigh($width: 0, $height: 0) {
+  width: $width;
+  height: $height;
+}
+
+@mixin paddings($size...) {
+  padding: $size;
+}
+
+@mixin margins($size...) {
+  margin: $size;
+}
+
+@mixin centeredFlex($type: flex, $justifyContent: center) {
+  display: $type;
+  justify-content: $justifyContent;
+  align-items: center;
+}
+
+@mixin linkSize {
+  @include paddings(32px 0);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+@mixin buttonSizes {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+}

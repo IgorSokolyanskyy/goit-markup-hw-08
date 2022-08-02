@@ -1,0 +1,44 @@
+/* наша команда */
+.section-command {
+  @include paddings(94px 0);
+
+  background-color: $secondry-background-color;
+}
+
+/* карточки команды */
+.command-card__list {
+  @include centeredFlex(flex, space-between);
+}
+
+.command-card__item {
+  box-shadow: $command-card__item-box-shadow;
+  border-radius: 0px 0px 4px 4px;
+  background-color: $primary-background-color;
+}
+
+.faces {
+  display: block;
+}
+
+.command-card__meta {
+  @include paddings(30px 0);
+  text-align: center;
+}
+
+/* имена коллег */
+.command-card__name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* работа коллег */
+.command-card__price {
+  margin-bottom: 16px;
+
+  color: $title-text-color;
+  font-size: 16px;
+  line-height: 1.19;
+}

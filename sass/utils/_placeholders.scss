@@ -1,7 +1,35 @@
 .container {
-  width: 1200px;
+  // width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and(max-width:1199px) {
+    .title {
+      margin-bottom: 30px;
+
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    .title {
+      margin-bottom: 50px;
+
+      font-weight: 700;
+      font-size: 36px;
+      text-align: center;
+    }
+  }
 }

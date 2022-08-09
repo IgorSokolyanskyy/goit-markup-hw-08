@@ -1,18 +1,68 @@
 .hero {
-  @include widthHeigh(1600px, 600px);
-  @include paddings(200px 0);
-
-  background-color: $footer-background-color;
+  max-width: 1600px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/Hero/hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    url(../images/hero/hero-480.jpg);
+  background-size: 570px 400px;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-960.jpg);
+  }
+}
+@media screen and (min-width: 571px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-768.jpg);
+    background-size: 1020px 400px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/hero-1600.jpg);
+    }
+  }
+}
+@media screen and(min-width:1021px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/hero-1536.jpg);
+    background-size: 1600px 600px;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/hero-3200.jpg);
+    }
+  }
 }
 .hero__main {
-  width: 696px;
+  max-width: 696px;
+  @media screen and(max-width:767px) {
+    @include paddings(118px 0);
+    height: 400px;
+  }
+  @media screen and(min-width:$tablet) {
+    @include paddings(118px 100px);
+    height: 400px;
+  }
+  @media screen and(min-width:$desktop) {
+    @include paddings(200px 0);
+    height: 600px;
+  }
 }
 
 .hero__title-heading {
@@ -26,4 +76,8 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
+  @media screen and(max-width:1199px) {
+    font-size: 26px;
+    line-height: 1.6;
+  }
 }

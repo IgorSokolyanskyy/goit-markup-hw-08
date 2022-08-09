@@ -1,11 +1,133 @@
 .header {
-  max-height: 80px;
   border-bottom: 1px solid $header-border;
 }
 .header__page {
-  display: flex;
-}
-.header__nav {
+  position: relative;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    min-height: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
+}
+
+.menu__button {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  z-index: 999;
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  & .menu__icon-cross {
+    display: none;
+  }
+  &.is-open .menu__icon-cross {
+    display: block;
+  }
+  &.is-open .menu__icon-burger {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+  &.is-open:hover,
+  &.is-open:focus {
+    fill: $accent-color;
+  }
+  transition: fill $transition-time $timing-functions;
+}
+
+.menu__container {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  padding: 48px 40px;
+  z-index: 998;
+
+  background-color: $primary-background-color;
+  transform: translateY(-100%);
+  transition: transform $transition-time $timing-functions;
+
+  &.is-open {
+    transform: translateY(0);
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.navigation__item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 306px;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  transition: color $transition-time $timing-functions;
+
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 0.02em;
+}
+
+.contacts__item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 62px;
+  }
+}
+.contacts__link-tel {
+  font-weight: 500;
+  font-size: 34px;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+.contacts__link-mail {
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  transition: color $transition-time $timing-functions;
+}
+
+.instalink__list {
+  display: flex;
+}
+.instalink__item {
+  margin-left: 10px;
+  &:first-child {
+    margin: 0;
+  }
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+.instalink__link-linkedIn,
+.instalink__link-twitter,
+.instalink__link-facebook,
+::after {
+  border-right: 1px solid $form-input-border;
+  margin-right: 10px;
 }

@@ -1,10 +1,10 @@
 @import './utils/vars';
+@import './utils/breakpoints';
 @import './utils/mixins';
 @import './utils/placeholders';
 
 @import './components/reuses/logo';
 @import './components/reuses/button';
-@import './components/reuses/title';
 @import './components/reuses/networks';
 
 @import './components/body';
@@ -14,16 +14,13 @@
 @import './components/header/auth-nav';
 
 @import './components/main/hero';
-
 @import './components/main/section-description';
-
 @import './components/main/section-works';
-
 @import './components/main/section-command';
-
 @import './components/main/section-clients';
 
 @import './components/footer/footer';
+@import './components/footer/column-address';
 @import './components/footer/column-join';
 @import './components/footer/column-subscribe';
 

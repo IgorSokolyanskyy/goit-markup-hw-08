@@ -1,14 +1,19 @@
 .site-nav__list {
-  display: flex;
-  gap: $gap50;
-  margin-left: 93px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    gap: $gap50;
+    margin-left: 88px;
+  }
 }
 
-// .site-nav__item:first-child {
-// }
-
 .link {
+  padding: 33px 0;
   @include linkSize;
+
   transition: color $transition-time $timing-functions;
 
   &:hover,
@@ -25,10 +30,9 @@
     content: '';
 
     position: absolute;
+    display: block;
     left: 0;
     bottom: 0;
-
-    display: block;
 
     @include widthHeigh(100%, 4px);
 

@@ -1,10 +1,18 @@
 /* присоединяйтесь */
 .column-join {
-  margin-right: 93px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
 }
 .join__title {
   margin-bottom: 20px;
 
   color: $primary-white-color;
   text-transform: uppercase;
+}
+
+.footer__icon {
+  fill: $primary-white-color;
+  background-color: $footer__icon-background-color;
 }

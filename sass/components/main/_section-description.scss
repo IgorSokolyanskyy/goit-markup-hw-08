@@ -1,28 +1,65 @@
 .section-description {
-  @include paddings(94px 0);
+  padding: 60px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
 }
 .description-card__list {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and(min-width:$desktop) {
+    justify-content: space-between;
+    margin: 0;
+  }
 }
+
 .description-card__item {
-  width: 270px;
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+    margin: 0;
+  }
 }
 
 .description-card__icon {
-  @include centeredFlex;
+  @include paddings(25px 0);
+  text-align: center;
+
   height: 120px;
   margin-bottom: 30px;
   background: $secondry-background-color;
   border-radius: 4px;
+
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex;
+    padding: 0;
+  }
 }
 .description-card__subtitle {
   margin-bottom: 10px;
 
   font-size: 14px;
   line-height: 1.14;
-
+  text-align: center;
   text-transform: uppercase;
+
+  @media screen and (min-width: $tablet) {
+    text-align: start;
+  }
 }
 .description-card__text {
   color: $title-text-color;

@@ -2,7 +2,15 @@
 .options {
   position: relative;
   @include centeredFlex;
+  white-space: nowrap;
+  // @include centeredFlex;
   margin-bottom: 30px;
+
+  @media screen and(max-width:1199px) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+  }
 }
 
 .options__checkbox {
@@ -38,16 +46,5 @@
 .agreement {
   margin-left: 4px;
   color: $accent-color;
-
-  &::after {
-    position: absolute;
-    content: '';
-
-    right: 12px;
-    bottom: 5px;
-    @include widthHeigh(28.5%, 0.5px);
-
-    background-color: $accent-color;
-    border-radius: 2px;
-  }
+  text-decoration: underline;
 }

@@ -48,7 +48,6 @@
 }
 
 @mixin linkSize {
-  @include paddings(32px 0);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;

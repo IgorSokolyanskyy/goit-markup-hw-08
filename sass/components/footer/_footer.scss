@@ -1,35 +1,17 @@
 /* футер */
 .footer {
-  @include paddings(60px 0);
   background-color: $footer-background-color;
+  @include paddings(60px 0);
 }
 
 .footer__page {
-  display: flex;
-  align-items: baseline;
-}
-.column-address {
-  width: 231px;
-  margin-right: 70px;
-}
-
-.address__item {
-  margin-bottom: 9px;
-  &:last-child {
-    margin-bottom: 0;
+  @media screen and(min-width:$tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
   }
-}
-
-.address__location {
-  color: $primary-white-color;
-  font-style: normal;
-}
-
-.address__contacts {
-  color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-  &:hover,
-  &:focus {
-    color: $accent-color;
+  @media screen and(min-width:$desktop) {
+    justify-content: space-between;
   }
 }

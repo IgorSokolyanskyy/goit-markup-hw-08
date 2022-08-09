@@ -1,4 +1,5 @@
 @import './utils/vars';
+@import './utils/breakpoints';
 @import './utils/mixins';
 @import './utils/placeholders';
 
@@ -17,5 +18,6 @@
 @import './components/portfolio/card-set';
 
 @import './components/footer/footer';
+@import './components/footer/column-address';
 @import './components/footer/column-join';
 @import './components/footer/column-subscribe';

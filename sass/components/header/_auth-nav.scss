@@ -1,10 +1,29 @@
 .auth-nav__list {
-  display: flex;
-  margin-left: auto;
-  gap: $gap30;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+    gap: $gap30;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: auto;
+  }
 }
-
+.auth-nav__item {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 .header__link {
+  @media screen and (max-width: 1199px) {
+    padding: 0;
+  }
   display: flex;
   align-items: center;
   gap: $gap10;

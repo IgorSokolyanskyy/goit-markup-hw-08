@@ -1,5 +1,4 @@
 .logo {
-  display: block;
   @include fontFamilyLogo;
 }
 .logo__text {
@@ -10,5 +9,10 @@
   }
 }
 .footer__logo {
+  display: inline-block;
   margin-bottom: 20px;
+
+  @media screen and(max-width:1199px) {
+    text-align: center;
+  }
 }

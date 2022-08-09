@@ -1,4 +1,9 @@
 /* подпишись на рассылку */
+.column-subscribe {
+  @media screen and (max-width: $desktop) {
+    text-align: center;
+  }
+}
 .subscribe__title {
   margin-bottom: 20px;
 
@@ -7,13 +12,16 @@
 }
 
 .form-footer {
-  display: flex;
+  @media screen and(min-width:$desktop) {
+    display: flex;
+  }
 }
 
 .form-footer__input {
-  @include widthHeigh(358px, 50px);
+  width: 100%;
+  margin-bottom: 20px;
   @include paddings(16px 15px);
-  margin-right: 12px;
+
   color: $primary-white-color;
   font-size: 16px;
 
@@ -29,4 +37,16 @@
     border: 1px solid $accent-color;
     outline: none;
   }
+
+  @media screen and(min-width:$tablet) {
+    @include widthHeigh(450px, 50px);
+  }
+  @media screen and(min-width:$desktop) {
+    @include widthHeigh(358px, 50px);
+    margin-right: 12px;
+  }
+}
+
+.footer__button {
+  gap: $gap10;
 }

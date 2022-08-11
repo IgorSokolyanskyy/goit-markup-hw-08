@@ -5,10 +5,10 @@
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero/hero-480.jpg);
-  background-size: 570px 400px;
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
+  // background-size: 540px 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
@@ -18,11 +18,14 @@
       url(../images/hero/hero-960.jpg);
   }
 }
-@media screen and (min-width: 571px) {
+@media screen and (min-width: $tablet) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero/hero-768.jpg);
-    background-size: 1020px 400px;
+    // background-size: 820px 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -30,15 +33,18 @@
     screen and (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero/hero-1600.jpg);
+        url(../images/hero/hero-1536.jpg);
     }
   }
 }
-@media screen and(min-width:1021px) {
+@media screen and(min-width:$desktop) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero/hero-1536.jpg);
-    background-size: 1600px 600px;
+      url(../images/hero/hero-1600.jpg);
+    // background-size: 1600px 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),

@@ -1,13 +1,15 @@
 /*  Фильтки / Кнопки */
 .portfolio-button__list {
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 767px) {
     display: flex;
     flex-wrap: wrap;
     gap: $gap8;
     margin-bottom: 40px;
   }
   @media screen and (min-width: $tablet) {
+    display: flex;
     justify-content: center;
+    gap: $gap8;
     margin-bottom: 50px;
   }
 }

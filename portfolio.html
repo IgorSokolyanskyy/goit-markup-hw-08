@@ -24,7 +24,7 @@
     <header class="header">
       <!-- контактная информация -->
       <div class="header__page container">
-        <a class="logo" href="">Web<span class="logo__text">Studio</span> </a>
+        <a class="logo" href="./index.html">Web<span class="logo__text">Studio</span> </a>
 
         <button
           class="menu__button"
@@ -34,22 +34,25 @@
           data-menu-button
         >
           <svg class="menu__svg" width="40" height="40" aria-label="Переключатель мобильного меню">
-            <use
-              class="menu__icon-burger"
-              href="./images/icons.svg/burger-icon.svg#icon-burger-icon"
-            ></use>
-            <use
-              class="menu__icon-cross"
-              href="./images/icons.svg/burger-icon.svg#icon-close-icon"
-            ></use>
+            <use class="menu__icon-burger" href="./images/icons.svg/menu-icon.svg#icon-menu"></use>
+            <use class="menu__icon-cross" href="./images/icons.svg/menu-icon.svg#icon-close"></use>
           </svg>
         </button>
+
         <div class="menu__container" id="menu-container" data-menu>
           <div class="navigation">
             <ul class="navigation__list">
-              <li class="navigation__item"><a href=".//index.html"></a>Студия</li>
-              <li class="navigation__item"><a href="./portfolio.html"></a>Портфолио</li>
-              <li class="navigation__item"><a href=""></a>Контакты</li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="./index.html">Студия</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--current" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="">Контакты</a>
+              </li>
             </ul>
           </div>
           <div class="contacts">
@@ -58,25 +61,25 @@
                 <a class="contacts__link-tel" href="tel:+380961111111">+38 096 111 11 11</a>
               </li>
               <li class="contacts__item">
-                <a class="contacts__link-mail" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+                <a class="contacts__link-mail" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
               </li>
             </ul>
           </div>
           <div class="instalink">
             <ul class="instalink__list">
               <li class="instalink__item">
-                <a class="instalink__link-instagram" href=""></a>Instagram
+                <a class="instalink__link-instagram" href="">Instagram</a>
               </li>
               <li class="instalink__item">
-                <a class="instalink__link-twitter" href=""></a>Twitter
+                <a class="instalink__link-twitter" href="">Twitter</a>
               </li>
               <li class="instalink__item">
-                <a class="instalink__link-facebook" href=""></a>Facebook
+                <a class="instalink__link-facebook" href="">Facebook</a>
               </li>
               <li class="instalink__item">
-                <a class="instalink__link-linkedIn" href=""></a>LinkedIn
+                <a class="instalink__link-linkedIn" href="">LinkedIn</a>
               </li>
             </ul>
           </div>

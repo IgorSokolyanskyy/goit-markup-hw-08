@@ -43,7 +43,7 @@
   height: 100vm;
   z-index: 970;
 
-  padding: 48px 40px;
+  padding: 48px 0 48px 40px;
   background-color: $primary-background-color;
 
   transition: transform $transition-time $timing-functions;
@@ -95,9 +95,9 @@
   color: $accent-color;
 }
 .contacts__link-mail {
-  @media screen and (max-width: 410px) {
-    font-size: 20px;
-  }
+  // @media screen and (max-width: 410px) {
+  //   font-size: 20px;
+  // }
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;

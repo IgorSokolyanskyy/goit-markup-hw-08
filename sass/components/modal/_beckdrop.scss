@@ -9,9 +9,10 @@
   background-color: $backdrop-background-color;
 
   opacity: 1;
-  z-index: 999;
+  z-index: 990;
   transition: opacity $transition-time $timing-functions;
   overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 /* утилита */

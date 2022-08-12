@@ -2,8 +2,8 @@
 .options {
   position: relative;
 
-  display: inline-block;
-
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 
   @media screen and(max-width:1199px) {

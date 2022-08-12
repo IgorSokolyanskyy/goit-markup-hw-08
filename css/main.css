@@ -183,6 +183,7 @@ body a {
 }
 
 .header__nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,8 +200,8 @@ body a {
 
 .menu__button {
   margin-left: auto;
-  z-index: 999;
   padding: 0;
+  z-index: 980;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -238,8 +239,8 @@ body a {
           transform: translateX(-50%);
   width: 100%;
   height: 100vm;
+  z-index: 970;
   padding: 48px 40px;
-  z-index: 998;
   background-color: #ffffff;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -289,6 +290,11 @@ body a {
   letter-spacing: 0.02em;
   color: #2196f3;
 }
+@media screen and (max-width: 410px) {
+  .contacts__link-tel {
+    font-size: 24px;
+  }
+}
 
 .contacts__link-mail {
   font-weight: 500;
@@ -298,6 +304,11 @@ body a {
   color: #757575;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 410px) {
+  .contacts__link-mail {
+    font-size: 20px;
+  }
 }
 .contacts__link-mail:hover, .contacts__link-mail:focus {
   color: #2196f3;
@@ -323,6 +334,15 @@ body a {
 .instalink__item:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 410px) {
+  .instalink__item {
+    font-size: 10px;
+    margin-right: 10px;
+  }
+  .instalink__item:last-child {
+    margin-right: 0;
+  }
+}
 
 .instalink__link-instagram::after {
   content: "";
@@ -334,6 +354,18 @@ body a {
   width: 1px;
   border-inline: 1px solid rgba(33, 33, 33, 0.2);
 }
+@media screen and (max-width: 410px) {
+  .instalink__link-instagram::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 51px;
+    height: 100%;
+    width: 1px;
+    border-inline: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
 
 .instalink__link-twitter::after {
   content: "";
@@ -343,6 +375,18 @@ body a {
   left: 68px;
   height: 100%;
   border-inline: 1px solid rgba(33, 33, 33, 0.2);
+}
+@media screen and (max-width: 410px) {
+  .instalink__link-twitter::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 37px;
+    height: 100%;
+    width: 1px;
+    border-inline: 1px solid rgba(33, 33, 33, 0.2);
+  }
 }
 
 .instalink__link-facebook::after {
@@ -354,6 +398,18 @@ body a {
   height: 100%;
   border-inline: 1px solid rgba(33, 33, 33, 0.2);
 }
+@media screen and (max-width: 410px) {
+  .instalink__link-facebook::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 49px;
+    height: 100%;
+    width: 1px;
+    border-inline: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
 
 .instalink__link-linkedIn::after {
   content: "";
@@ -363,6 +419,18 @@ body a {
   left: 78px;
   height: 100%;
   border-inline: 1px solid rgba(33, 33, 33, 0.2);
+}
+@media screen and (max-width: 410px) {
+  .instalink__link-linkedIn::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 44px;
+    height: 100%;
+    width: 1px;
+    border-inline: 1px solid rgba(33, 33, 33, 0.2);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -971,12 +1039,15 @@ body a {
   position: fixed;
   top: 0%;
   left: 0%;
+  padding: 93px 15px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  z-index: 999;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 /* утилита */
@@ -992,12 +1063,10 @@ body a {
 
 /* модальное окно */
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
+  width: 100%;
+  height: 100vm;
   padding: 40px;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1008,14 +1077,21 @@ body a {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 481px) {
   .modal {
-    min-width: 450px;
+    width: 450px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .modal {
     width: 528px;
+    height: auto;
   }
 }
 
@@ -1109,23 +1185,14 @@ textarea::placeholder {
 /* чекбокс */
 .options {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  white-space: nowrap;
+  display: inline-block;
   margin-bottom: 30px;
 }
 @media screen and (max-width: 1199px) {
   .options {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.2;
+    letter-spacing: 0;
   }
 }
 
@@ -1143,18 +1210,18 @@ textarea::placeholder {
   border-color: #2196f3;
 }
 
+.agreement {
+  margin-left: 4px;
+  color: #2196f3;
+  text-decoration: underline;
+}
+
 .options__icon {
-  margin-right: 8px;
+  margin-right: 6px;
   border: 2px solid #212121;
   border-radius: 2px;
   /* background-origin: border-box; */
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-}
-
-.agreement {
-  margin-left: 4px;
-  color: #2196f3;
-  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

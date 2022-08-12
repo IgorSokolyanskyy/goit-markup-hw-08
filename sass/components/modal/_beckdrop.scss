@@ -1,15 +1,17 @@
 /* бекдроп */
 .backdrop {
   position: fixed;
+
   top: 0%;
   left: 0%;
-
+  padding: 93px 15px;
   @include widthHeigh(100%, 100%);
   background-color: $backdrop-background-color;
 
   opacity: 1;
-
+  z-index: 999;
   transition: opacity $transition-time $timing-functions;
+  overflow-y: scroll;
 }
 
 /* утилита */

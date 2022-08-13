@@ -234,9 +234,7 @@ body a {
   display: none;
   position: fixed;
   top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 0;
   z-index: 970;
   padding: 48px 0 48px 40px;
   background-color: #ffffff;

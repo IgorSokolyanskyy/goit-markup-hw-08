@@ -34,13 +34,11 @@
 
 .menu__container {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 
-  width: 100%;
-  height: 100vm;
   z-index: 970;
 
   padding: 48px 0 48px 40px;
@@ -49,6 +47,8 @@
   transition: transform $transition-time $timing-functions;
 
   @media screen and (max-width: $tablet) {
+    width: 100%;
+    height: 100%;
     display: none;
     &.is-open {
       display: block;

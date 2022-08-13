@@ -34,13 +34,11 @@
   &:not(:last-child) {
     @media screen and (max-width: 767px) {
       margin-bottom: 30px;
-      max-width: 450px;
     }
   }
   @media screen and (min-width: $tablet) {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
-    width: 354px;
   }
   @media screen and (min-width: $desktop) {
     width: 270px;

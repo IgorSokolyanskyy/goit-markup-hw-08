@@ -72,15 +72,37 @@
 }
 
 .product__actions {
-  position: absolute;
-  width: 322px;
-  top: 50%;
-  left: 50%;
+  @media screen and (min-width: $mobile) {
+    position: absolute;
+    width: 402px;
+    top: 50%;
+    left: 50%;
 
-  transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    width: 306px;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    width: 322px;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
 }
 
 .product__text {
+  @media screen and (max-width: 450px) {
+    font-size: 16px;
+    padding: 15px;
+  }
   font-size: 18px;
   line-height: 1.5;
   color: $primary-white-color;

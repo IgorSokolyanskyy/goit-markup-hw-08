@@ -209,28 +209,3 @@
     border-inline: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
-.instalink__link-linkedIn::after {
-  content: '';
-
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 78px;
-
-  height: 100%;
-
-  border-inline: 1px solid rgba(33, 33, 33, 0.2);
-  @media screen and (max-width: 410px) {
-    content: '';
-
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 44px;
-
-    height: 100%;
-    width: 1px;
-
-    border-inline: 1px solid rgba(33, 33, 33, 0.2);
-  }
-}

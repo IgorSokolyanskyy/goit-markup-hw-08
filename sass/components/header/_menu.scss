@@ -10,16 +10,16 @@
   & .menu__icon-cross {
     display: none;
   }
-  &.is-open .menu__icon-cross {
-    display: block;
-  }
-  &.is-open .menu__icon-burger {
-    display: none;
-  }
   &.is-open {
     position: fixed;
     top: 10px;
-    right: 0;
+    right: 15px;
+    &.is-open .menu__icon-cross {
+      display: block;
+    }
+    &.is-open .menu__icon-burger {
+      display: none;
+    }
   }
   &:hover,
   &:focus {
